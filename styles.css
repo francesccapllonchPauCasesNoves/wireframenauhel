@@ -1,0 +1,83 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+h1{
+	color:red;
+}
+p{
+	color:red;
+}
+.lateral{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 100vh;
+	background-color: #111;
+	padding-top: 20px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+}
+.lateral img {
+	display:block;
+	padding: 10px 15px;
+	color: f1f1f1;
+	width: 25px;
+	height: 25px;
+
+}
+.lateral img:hover {
+	background-color: #333;
+}
+.main{
+	margin-left: 50px;
+	padding: 20px;
+	background-color: #333;
+}
+
+.perfil{
+	margin-top: auto;
+	margin-bottom: 20px;
+
+}
+.artista{
+	padding: 30px;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.artista h1{
+	color: #FF3131;
+
+}
+.artistaimg{
+	width: 80px;
+	height: 80px;
+	display: flex;
+}
+.artistadesc p{
+	color: gray;
+
+}
+.artistadesc div{
+	border: solid gray;
+	border-width: 2px;
+	border-radius: 10px;
+	text-align: padding-top;
+	width: 300px;
+
+	
+}
+.desc{
+	height: 100px;
+}
+.artistadesc {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 3px;
+}
