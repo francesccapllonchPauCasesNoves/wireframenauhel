@@ -2,6 +2,7 @@ body{
 	margin: 0;
 	padding: 0;
 	font-family: Arial, sans-serif;
+	background-color:#333 ;
 }
 h1{
 	color:red;
@@ -45,10 +46,10 @@ p{
 }
 .artista{
 	padding: 30px;
-	
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	align-items: flex-start;
+	gap :15px;
 }
 .artista h1{
 	color: #FF3131;
@@ -57,7 +58,6 @@ p{
 .artistaimg{
 	width: 80px;
 	height: 80px;
-	display: flex;
 }
 .artistadesc p{
 	color: gray;
@@ -67,10 +67,13 @@ p{
 	border: solid gray;
 	border-width: 2px;
 	border-radius: 10px;
-	text-align: padding-top;
-	width: 300px;
+	width: 380px;
+	gap: 10px;
 
 	
+}
+.artistaN{
+
 }
 .desc{
 	height: 100px;
@@ -79,5 +82,35 @@ p{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	gap: 3px;
+	align-items: center;
 }
+.logof{
+	width: 20px;
+	height: 20px;
+}
+.logo{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+	padding-top: 0px;
+}
+.logo p{
+	color: white;
+}
+.cyg{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	text-align: center;
+	align-items: ;
+	gap: 30px;
+}
+.cyg img{
+	width: 150px;
+	height: 150px;
+}
+.cyg h2{
+	color: white;
+}
+
