@@ -3,24 +3,29 @@ body{
 	padding: 0;
 	font-family: Arial, sans-serif;
 	background-color:#333 ;
+	min-height: 100vh;
 }
 h1{
 	color:red;
+	margin: 0;
+	margin-bottom: 15px;
 }
 p{
-	color:red;
+	color:2hite;
+	font-weight: bold;
 }
 .lateral{
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 50px;
-	height: 100vh;
+	height: 100%;
 	background-color: #111;
 	padding-top: 20px;
 	color: white;
 	display: flex;
 	flex-direction: column;
+	z-index: 1000;
 }
 .lateral img {
 	display:block;
@@ -47,20 +52,23 @@ p{
 .artista{
 	padding: 30px;
 	display: flex;
-	flex-direction: row;
+	flex-direction: wrap;
 	align-items: flex-start;
-	gap :15px;
+	gap :20px;
 }
 .artista h1{
 	color: #FF3131;
+	margin-bottom: 5px;
 
 }
 .artistaimg{
 	width: 120px;
 	height: 120px;
+	border-radius: 50%;
 }
 .artistadesc p{
 	color: gray;
+	height: 80px;
 
 }
 .artistadesc div{
@@ -68,12 +76,10 @@ p{
 	border-width: 2px;
 	border-radius: 10px;
 	gap: 10px;
-	width:800px ;
+	width:100%px ;
+	box-sizing: border-box;
 
 	
-}
-.artistaN{
-
 }
 .desc{
 	height: 100px;
@@ -81,9 +87,11 @@ p{
 .artistadesc {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
+	gap: 10px;
+	width: 100%;
+	max-width: 800px;
 }
+
 .logof{
 	width: 30px;
 	height: 30px;
@@ -108,6 +116,7 @@ p{
 .cyg img{
 	width: 150px;
 	height: 150px;
+	object-fit: cover;
 }
 .cyg h2{
 	color: white;
@@ -115,10 +124,12 @@ p{
 .portada{
 	width:50px;
 	height:50px;
+	object-fit: cover;
 }
 .taula{
 	width: 100%;
-
+	border-collapse: collapse;
+	margin-bottom: 30px;
 }
 .taula tr:nth-child(odd) {
 	background-color: #444444;
@@ -132,7 +143,6 @@ p{
 .taula td {
     padding: 10px;
     vertical-align: middle;
-    border: none;
 }
 
 .taulaText{
@@ -160,6 +170,7 @@ p{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    gap: 10px;
 }
 p, h4 { margin: 0; 
 }
@@ -183,12 +194,14 @@ p, h4 { margin: 0;
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px 0;
+	gap: 20px;
+	flex-wrap: wrap;
 }
 .buscar1 {
 	border: 1px solid #999;
 	padding: 10px;
-	width: 50%;
-	color: #ccc;
+	flex-grow: 1;
+	min-width: 250ox;
 }
 .buscar1 p {
 	margin: 0;
@@ -234,9 +247,7 @@ p, h4 { margin: 0;
 		flex-direction: column;
 		align-items: center;
 	}
-	.cyg > div {
-		margin-bottom: 30px;
-	}
+	
 	
 
 
