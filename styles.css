@@ -15,17 +15,17 @@ p{
 	top: 0;
 	left: 0;
 	width: 50px;
-	height: 100vh;
+	height: 100%;
 	background-color: #111;
 	padding-top: 20px;
-	color: white;
 	display: flex;
 	flex-direction: column;
+	z-index:1000;
 }
 .lateral img {
 	display:block;
 	padding: 10px 15px;
-	color: f1f1f1;
+	color: #f1f1f1;
 	width: 25px;
 	height: 25px;
 
@@ -37,6 +37,7 @@ p{
 	margin-left: 50px;
 	padding: 20px;
 	background-color: #333;
+	overflow-x: hidden;
 }
 
 .perfil{
@@ -47,42 +48,45 @@ p{
 .artista{
 	padding: 30px;
 	display: flex;
-	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 20px;
 	align-items: flex-start;
-	gap :15px;
 }
 .artista h1{
 	color: #FF3131;
+	margin-bottom: 5px;
 
 }
 .artistaimg{
 	width: 120px;
 	height: 120px;
+	object-fit: cover;
+	border-radius: 50%;
 }
 .artistadesc p{
 	color: gray;
-
+}
+.desc{
+	height: 80px
 }
 .artistadesc div{
 	border: solid gray;
 	border-width: 2px;
 	border-radius: 10px;
-	gap: 10px;
-	width:800px ;
-
+	width: 100%;
+	box-sizing: border-box;
 	
 }
-.artistaN{
 
-}
 .desc{
 	height: 100px;
 }
 .artistadesc {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
+	gap: 10px;
+	width: 100%;
+	max-width: 800px;
 }
 .logof{
 	width: 30px;
@@ -90,16 +94,20 @@ p{
 }
 .logo{
 	display: flex;
-	flex-direction: row;
 	align-items: center;
 	gap: 10px;
-	padding-top: 0px;
+	margin-bottom: 20px;
+}
+.logof { 
+	width: 30px; 
+	height: 30px; 
 }
 .logo p{
 	color: white;
 }
 .cyg{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: flex-start;
 	flex-direction: row;
 	text-align: center;
@@ -118,13 +126,15 @@ p{
 }
 .taula{
 	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 30px;
 
 }
 .taula tr:nth-child(odd) {
 	background-color: #444444;
     color: white;
 }
-.taula tr:nth-child(evenly) {
+.taula tr:nth-child(even) {
 	background-color: #AAAAAA;
 	color: #333333;
 
@@ -132,7 +142,6 @@ p{
 .taula td {
     padding: 10px;
     vertical-align: middle;
-    border: none;
 }
 
 .taulaText{
@@ -180,6 +189,7 @@ p, h4 { margin: 0;
 }
 .buscar{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px 0;
@@ -215,29 +225,55 @@ p, h4 { margin: 0;
 	cursor: pointer;
 }
 
-@media(max-width: 768px) {
-	.buscar{
-		flex-direction: column;
-		gap: 15px;
-		align-items: stretch;
+@media (max-width: 768px){
+	.main{
+		padding: 10px;
 	}
-
-	.buscar1{
-		width: 100%;
-		box-sizing: border-box;
-	}
-	.buscar2{
-		justify-content: space-between;
-		width: 100%;
-	}
-	.cyg{
+	.artista {
 		flex-direction: column;
 		align-items: center;
+		text-align: center;
 	}
-	.cyg > div {
-		margin-bottom: 30px;
+	.artistadesc{
+		width: 100%;
+	}
+
+	.taulatd{
+		padding: 5px 2px;
+	}
+	.portada{
+		width: 40px;
+		height: 40px;
+	}
+	.iconos img{
+		width: 18px;
+		height: 18px;
+		margin-left: 5px;
+	}
+	.cyg{
+		justify-content: center;
+		gap: 15px;
 	}
 	
 
+	.buscar1{
+		width: 100%;
+	}
+	.buscar2{
+		width: 100%; 
+		justify-content:space-between;
+	}
+	.grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:10px;
+        justify-items: center;
+    }
+    .grid-3 img{
+    	width: 100%;
+    	max-width: 100px;
+    	height: auto;
+    	aspect-ratio: 1/1;
+    }
 
 }
